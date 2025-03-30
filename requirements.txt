@@ -1,6 +1,5 @@
 fastapi
 pandas
-zipfile
 requests
 uvicorn
 python-dotenv
