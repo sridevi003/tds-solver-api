@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "main.py",  # Or "api/main.py" if it's in a subdirectory
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api(.*)",
+        "dest": "main.py$1"  # Or "api/main.py$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "main.py"  #  Fallback to main.py for other requests (if needed)
+      }
+    ]
+  }
